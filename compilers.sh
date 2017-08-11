@@ -14,5 +14,8 @@ fi
 # - g++
 # - gfortran
 # - python
+# -- pip install numpy
+# -- pip install pandas
+# -- pip install scipy
 # - java
 
