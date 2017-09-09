@@ -19,3 +19,4 @@ fi
 # -- pip install scipy
 # - java
 
+# add somewhere gnuplot
