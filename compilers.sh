@@ -19,4 +19,6 @@ fi
 # -- pip install scipy
 # - java
 
+### scientific stuff:
 brew install gnuplot
+# madx, see http://hibtc.github.io/cpymad/installation/unix.html
