@@ -22,3 +22,4 @@ fi
 ### scientific stuff:
 brew install gnuplot
 # madx, see http://hibtc.github.io/cpymad/installation/unix.html
+# eventually install also cpymad to call madx from python
