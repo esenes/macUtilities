@@ -25,3 +25,9 @@ brew install gnuplot
 # eventually install also cpymad to call madx from python
 
 # cernbox
+
+#modify the CC, CPP and C++ environmental variables to solve the problem of the default compiler location
+# needs to export as
+# export CC="/usr/local/Cellar/gcc/7.2.0/bin/gcc-7"
+# export CPP="/usr/local/Cellar/gcc/7.2.0/bin/gpp-7"
+# export CXX="/usr/local/Cellar/gcc/7.2.0/bin/g++-7"
