@@ -9,3 +9,4 @@ echo "Cmake installation"
 brew install cmake
 
 #install macPorts
+brew install macports
