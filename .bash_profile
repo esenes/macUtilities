@@ -1,26 +1,30 @@
-# added by Anaconda3 4.4.0 installer
-export PATH="/Users/esenes/anaconda/bin:$PATH"
-
-# add the path for the openafs
-export PATH="/opt/openafs/bin:$PATH"
+#################################################################
+# REMOTE FILESYSTEM MOUNTS
+#################################################################
+# eos mount/dismount shortcuts
+alias eos_mount='. /Users/esenes/Scripts/mount_eos.sh'
+alias eos_demount_all='. /Users/esenes/Scripts/demount_all_eos.sh'
+# try to add mountpoint for eos
+eos_mount
+# eos shortucuts
+export myEos='/Users/esenes/eos/user/e/esenes'
+export liuEos='/Users/esenes/eos/project/l/liu/PS/data/2017/MD2586_InjectionEmittanceBlowup'
+#################################################################
 
 # add MAD-X path and create an alias as "madx"
-export PATH="$PATH:/madx"
-alias madx='madx-macosx64-gnu'
+export PATH=$PATH':/Users/esenes/MADx'
+alias madx='madx-macosx64-intel'
 
-# custom commands for networking at CERN
-export afsUhome="/afs/cern.ch/user/e/esenes"
-export afsWhome="/afs/cern.ch/work/e/esenes"
-alias lxplus='ssh esenes@lxplus.cern.ch'
-alias pslinux2='ssh esenes@pslinux2.cern.ch'
+# commands for networking at cern
+alias lxplus='ssh -XC esenes@lxplus.cern.ch'
+alias myVM='ssh esenes@cwe-513-vol915'
 
-# adjyust default system compiler on the MAC
-export CC="/usr/local/Cellar/gcc/7.2.0/bin/gcc-7"
-export CPP="/usr/local/Cellar/gcc/7.2.0/bin/gpp-7"
-export CXX="/usr/local/Cellar/gcc/7.2.0/bin/g++-7"
+# quick folder jumps
+export myEos='/Users/esenes/eos/user/e/esenes'
 
-# handy commands
-alias ll='ls -l'
+# custom commands/overloading
+alias ll='ls -Al'
+alias cp='cp -v'
 
 ##### APPEARANCE
 # modify the shell PS1 line:
@@ -28,3 +32,21 @@ export PS1='[\u@\h \w]\$'
 # color settings
 export CLICOLOR=1
 export LSCOLORS=ExFxBxDxCxegedabagacad
+
+
+# added by Anaconda3 5.3.0 installer
+# >>> conda init >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$(CONDA_REPORT_ERRORS=false '/anaconda3/bin/conda' shell.bash hook 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    \eval "$__conda_setup"
+else
+    if [ -f "/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/anaconda3/etc/profile.d/conda.sh"
+        CONDA_CHANGEPS1=false conda activate base
+    else
+        \export PATH="/anaconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda init <<<
